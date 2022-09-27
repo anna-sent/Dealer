@@ -39,7 +39,6 @@ public class DealerController {
 
         Response responseWasModified = myService.execute(response);
         Response sendMessage = mailer.send(responseWasModified);
-        // return new ResponseEntity<>(responseWasModified, HttpStatus.OK);
         return new ResponseEntity<>(sendMessage, HttpStatus.OK);
 
     }
